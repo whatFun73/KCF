@@ -175,18 +175,16 @@ footer {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header h1 {
-    margin-bottom: 0.5rem;
+    flex-direction: row;        /* keep it side by side */
+    justify-content: space-between;
+    align-items: center;
   }
 
   nav ul {
     flex-wrap: wrap;
     gap: 1rem;
   }
+}
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr; /* 2 across on tablets/phones */
