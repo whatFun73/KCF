@@ -36,6 +36,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 nav a {
@@ -46,6 +47,16 @@ nav a {
 
 nav a:hover {
   color: #3b5323;
+}
+
+nav .lang a {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555;
+}
+
+nav .lang a:hover {
+  text-decoration: underline;
 }
 
 /* ===== Hero ===== */
