@@ -16,7 +16,7 @@ body {
 /* ===== Header ===== */
 header {
   display: flex;
-  justify-content: space-between; /* keeps name left, nav right */
+  justify-content: space-between; /* name left, nav right */
   align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ddd;
@@ -27,11 +27,12 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;   /* bigger for stronger branding */
+  font-size: 2rem;   /* enlarged for branding */
   font-weight: bold;
   color: #3b5323; /* dark olive */
 }
 
+/* ===== Nav ===== */
 nav ul {
   list-style: none;
   display: flex;
@@ -185,15 +186,19 @@ footer {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  header {
+    flex-direction: row;        /* keep nav beside name */
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* two images across */
+    grid-template-columns: 1fr 1fr; /* 2 across on tablets/landscape */
     gap: 1rem;
   }
 
-  /* Make 3rd image span full width below */
   .gallery-grid img:nth-child(3) {
-    grid-column: 1 / -1; /* span both columns */
+    grid-column: 1 / -1; /* make 3rd span full width */
     width: 100%;
     justify-self: center;
   }
@@ -207,39 +212,5 @@ footer {
   .gallery-grid img:nth-child(3) {
     grid-column: auto;
     width: 100%;
-  }
-}
-/* ===== Gallery Items ===== */
-.gallery-item {
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-item p {
-  margin: 0.8rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #444;
-  text-align: center;
-}
-
-/* ===== Header spacing tweak for mobile ===== */
-@media (max-width: 480px) {
-  header h1 {
-    margin-left: 15px; /* give extra breathing room */
   }
 }
