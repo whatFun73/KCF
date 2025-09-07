@@ -184,7 +184,6 @@ footer {
 }
 
 /* ===== Responsive ===== */
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: 1fr 1fr; /* 2 across on tablets/landscape */
@@ -195,6 +194,17 @@ footer {
     grid-column: span 2; /* 3rd one full width below */
     justify-self: center;
     width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* single column on small phones */
+  }
+
+  .gallery-grid img:nth-child(3) {
+    grid-column: span 1;
+    width: 100%;
   }
 }
 
