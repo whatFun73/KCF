@@ -12,31 +12,45 @@
     <h1>KC.Flooring73</h1>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="lang"><a href="?lang=en">EN</a> | <a href="?lang=fr">FR</a></li>
+        <li><a href="#home" data-en="Home" data-fr="Accueil">Home</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-fr="Galerie">Gallery</a></li>
+        <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+        <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
       </ul>
+      <span class="lang-toggle" onclick="setLang('en')">EN</span> | 
+      <span class="lang-toggle" onclick="setLang('fr')">FR</span>
     </nav>
   </header>
 
   <!-- ===== Hero ===== -->
   <section class="hero" id="home">
-    <h2>Transforming Interiors with Style & Expert Installation</h2>
-    <p>
+    <h2 data-en="Transforming Interiors with Style & Expert Installation" 
+        data-fr="Transformer les intérieurs avec style & installation experte">
+      Transforming Interiors with Style & Expert Installation
+    </h2>
+    <p data-en="Whether it’s luxurious carpets or a complete tile renovation, we create interiors that blend comfort, practicality, and refined style — always installed with precision and designed to last."
+       data-fr="Qu'il s'agisse de tapis luxueux ou d'une rénovation complète de carrelage, nous créons des intérieurs qui allient confort, praticité et style raffiné — toujours installés avec précision et conçus pour durer.">
       Whether it’s luxurious carpets or a complete tile renovation, we create interiors that blend comfort, practicality, and refined style — always installed with precision and designed to last.
     </p>
-    <a href="#gallery" class="btn">View Gallery</a>
+    <a href="#gallery" class="btn" data-en="View Gallery" data-fr="Voir la galerie">View Gallery</a>
   </section>
 
   <!-- ===== Gallery ===== -->
   <section class="gallery" id="gallery">
-    <h2>Our Work</h2>
+    <h2 data-en="Our Work" data-fr="Nos Réalisations">Our Work</h2>
     <div class="gallery-grid">
-      <img src="images/IMG_0245.jpeg" alt="Tile Renovation">
-      <img src="images/IMG_0302.jpeg" alt="Luxury Carpet & Vinyl Installation">
-      <img src="images/IMG_0297.jpeg" alt="Flooring Example">
+      <div class="gallery-item">
+        <img src="images/IMG_0245.jpeg" alt="Tile Renovation">
+        <p data-en="Tile Renovation" data-fr="Rénovation de carrelage">Tile Renovation</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/IMG_0302.jpeg" alt="Luxury Carpet & Vinyl">
+        <p data-en="Luxury Carpet & Vinyl" data-fr="Moquette & Vinyle de luxe">Luxury Carpet & Vinyl</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/IMG_0297.jpeg" alt="Amtico & LVT Flooring">
+        <p data-en="Amtico & LVT Flooring" data-fr="Sol Amtico & LVT">Amtico & LVT Flooring</p>
+      </div>
     </div>
   </section>
 
@@ -64,5 +78,14 @@
   <footer>
     <p>&copy; 2025 KC.Flooring73 — All Rights Reserved.</p>
   </footer>
+
+  <!-- ===== Language Switcher ===== -->
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
+    }
+  </script>
 </body>
 </html>
