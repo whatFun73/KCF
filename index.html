@@ -9,22 +9,26 @@
 <body>
   <!-- ===== Header ===== -->
   <header>
-    <h1>KC.Flooring73</h1>
+    <div class="logo">KC.Flooring73</div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="lang-toggle">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('fr')">FR</button>
+      </div>
     </nav>
   </header>
 
   <!-- ===== Hero ===== -->
   <section class="hero" id="home">
-    <h2>Transforming Interiors with Style & Craftsmanship</h2>
+    <h2>Transforming Interiors with Style & Expertise</h2>
     <p>
-      Whether it’s luxurious carpets or a complete tile renovation, we create interiors that blend comfort, practicality, and refined style — always crafted with care and built to last.
+      Whether it’s luxurious carpets or a complete tile renovation, we create interiors that blend comfort, practicality, and refined style — always installed with precision and built to last.
     </p>
     <a href="#gallery" class="btn">View Gallery</a>
   </section>
@@ -72,5 +76,12 @@
   <footer>
     <p>&copy; 2025 KC.Flooring73 — All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      alert("Language switch to: " + lang);
+      // later this can load translations dynamically
+    }
+  </script>
 </body>
 </html>
