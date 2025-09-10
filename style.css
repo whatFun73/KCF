@@ -1,76 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KC.Flooring73</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- ===== Header ===== -->
-  <header>
-    <h1>KC.Flooring73</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+/* ===== Gallery Items ===== */
+.gallery-item {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
 
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="home">
-    <h2>Transforming Interiors with Style & Craftsmanship</h2>
-    <p>
-      Whether it’s luxurious carpets or a complete tile renovation, we create interiors that blend comfort, practicality, and refined style — always crafted with care and built to last.
-    </p>
-    <a href="#gallery" class="btn">View Gallery</a>
-  </section>
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
 
-  <!-- ===== Gallery ===== -->
-  <section class="gallery" id="gallery">
-    <h2>Our Work</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/IMG_0245.jpeg" alt="Tile Renovation">
-        <p>Tile Renovation</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/IMG_0302.jpeg" alt="Luxury Carpet & Vinyl Installation">
-        <p>Luxury Carpet & Vinyl Installation</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/IMG_0297.jpeg" alt="Amtico & LVT Flooring">
-        <p>Amtico & LVT Flooring</p>
-      </div>
-    </div>
-  </section>
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
 
-  <!-- ===== Services ===== -->
-  <section class="services" id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>✔ Tile Renovation</li>
-      <li>✔ Luxury Carpet Installation</li>
-      <li>✔ Vinyl & LVT Flooring</li>
-      <li>✔ Custom Flooring Solutions</li>
-      <li>✔ Professional Installation</li>
-    </ul>
-  </section>
+.gallery-item p {
+  margin: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  text-align: center;
+}
 
-  <!-- ===== Contact ===== -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:K.C.Flooring73@outlook.com">K.C.Flooring73@outlook.com</a></p>
-    <p>Phone: <a href="tel:+33766752588">0766752588</a></p>
-    <p>Location: Peisey-Nancroix, France</p>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>&copy; 2025 KC.Flooring73 — All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+/* ===== Header spacing tweak for mobile ===== */
+@media (max-width: 480px) {
+  header h1 {
+    margin-left: 15px; /* give extra breathing room */
+  }
+}
